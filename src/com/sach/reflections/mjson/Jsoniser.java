@@ -4,6 +4,8 @@ import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Map;
 
+import com.sach.reflections.annotations.Ignore;
+
 public class Jsoniser {
 
 	public static String toJson(Object object) throws Exception {
@@ -56,9 +58,19 @@ public class Jsoniser {
 		boolean firstObject = true;
 		for (Method method : methods) {
 			String propertyName = method.getName();
+
+			Ignore ignore = method.getAnnotation(Ignore.class);
+			if (ignore != null) {
+				/*
+				 * This method is to be ignored...
+				 */
+				continue;
+			}
+			
 			if (isClassMethod(propertyName)) {
 				continue;
 			}
+			
 			if (propertyName.startsWith("get")) {
 				propertyName = propertyName.substring(3, 4).toLowerCase() + propertyName.substring(4);
 			} else if (propertyName.startsWith("is")) {

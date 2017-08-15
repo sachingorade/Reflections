@@ -2,22 +2,26 @@ package com.sach.reflections.domain;
 
 import java.util.List;
 
+import com.sach.reflections.annotations.Ignore;
+
 public class User {
 
 	private long userId;
 	private String email;
 	private String role;
 	private List<String> features;
+	private String password; // just for example :)
 	
 	public User() {
 	}
 
-	public User(long userId, String email, String role, List<String> features) {
+	public User(long userId, String email, String role, List<String> features, String password) {
 		super();
 		this.userId = userId;
 		this.email = email;
 		this.role = role;
 		this.features = features;
+		this.password = password;
 	}
 	
 	protected User(long userId) {
@@ -81,6 +85,15 @@ public class User {
 
 	public void setFeatures(List<String> features) {
 		this.features = features;
+	}
+
+	@Ignore
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }
