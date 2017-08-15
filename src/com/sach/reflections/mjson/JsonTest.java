@@ -7,7 +7,7 @@ import com.sach.reflections.domain.User;
 public class JsonTest {
 
 	public static void main(String[] args) throws Exception {
-		User user = new User(2, "sachin.gorade@gmail.com", "viewer", Arrays.asList("feature1", "feature2"));
+		User user = new User(2, "sachin.gorade@somemailprovider.com", "viewer", Arrays.asList("feature1", "feature2"));
 		String json = Jsoniser.toJson(user);
 		System.out.println(json);
 	}

@@ -19,6 +19,10 @@ public class User {
 		this.role = role;
 		this.features = features;
 	}
+	
+	protected User(long userId) {
+		this.userId = userId;
+	}
 
 	@Override
 	public String toString() {
