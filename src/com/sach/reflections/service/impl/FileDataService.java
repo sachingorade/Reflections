@@ -18,5 +18,9 @@ public class FileDataService implements DataService {
 		}
 		return builder.toString();
 	}
+	
+	public String loadDataFromSomeOtherMeans() {
+		return "asasas";
+	}
 
 }
