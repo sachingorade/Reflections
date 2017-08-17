@@ -1,4 +1,4 @@
-# Reflections
+# Reflections [![Build Status](https://travis-ci.org/sachingorade/Reflections.svg?branch=master)](https://travis-ci.org/sachingorade/Reflections)
 This project contains the examples related to Reflections in Java.
 
 Following is the folder structure of the project -
