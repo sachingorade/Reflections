@@ -74,7 +74,7 @@ public class Jsoniser {
 			if (propertyName.startsWith("get")) {
 				propertyName = propertyName.substring(3, 4).toLowerCase() + propertyName.substring(4);
 			} else if (propertyName.startsWith("is")) {
-				propertyName = propertyName.substring(2, 3).toLowerCase() + propertyName.substring(2);
+				propertyName = propertyName.substring(2, 3).toLowerCase() + propertyName.substring(3);
 			} else {
 				continue;
 			}
